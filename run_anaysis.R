@@ -66,8 +66,6 @@ run_analysis <- function(){
 
 # Loop that assigns each activity a descriptive identifier
     
-    i <- 1
-
     for (i in 1:10299)
     {
         if(selectData[i, 87] == 1)
@@ -142,7 +140,7 @@ run_analysis <- function(){
 
 # Writing the file ".txt"
 
-    write.table(tidyData, file = "tidyData.txt")
+    write.table(tidyData, file = "tidyData.txt", row.name=FALSE)
 
     mnsg <- "Analysis carried out and file was written. You can view the file 
                 contents below."
